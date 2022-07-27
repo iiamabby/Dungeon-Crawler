@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="flex inventory">
+            <div class="inv-item" id="inv-slot1"></div>
+            <div class="inv-item" id="inv-slot2"></div>
+            <div class="inv-item"></div>
+            <div class="inv-item"></div>
+            <div class="inv-item"></div>
+            <div class="inv-item"></div>
+            <div class="inv-item"></div>
+        
+            <div class="inv-item playerStat" id="health">
+            </div>
+            <div class="inv-item playerStat" id="damage"></div>
+             </div>
+
+        </div>
+        
+      
+    <canvas id="mainCanvas"></canvas>
+    <div id="startScreen">
+        <div class="start-box">
+            <h1>Welcome to Dungeon Crawler</h1>
+            <p>You have been hired to defeat the slimey minion </p>
+            <p>Collect your treasure and free the village from its slimey ways </p>
+            <button id="startGame">Start</button>
+
+        </div>
+        
+
+    </div>
+    <div id="popupbox" class="popup">
+        <p id="innerText"></p>
+       
+        <button id="close">Okay!</button>
+
+    </div>
+    <div id = "combat-zone" class="popup">
+        <h2 id="combat-h">Enemy battle</h2>
+        <div class="flex-row">
+            <div id="playerCombat" class="flex-column">
+                <div id = "playerImage"></div>
+                <p id="ph"></p>
+                <p id="pd"></p>
+            </div>
+            <div id="dice" class="flex-column" >
+                <div id="winner"></div>
+                <div class="flex-row">
+                    <div id="playerRoll" class="box">
+                    </div>
+                    <div id="enemyRoll" class="box">
+                    </div>
+                </div>
+                <button id="roll" onClick="rollDice()">Roll</button>
+                <button id="cc" onClick="closeC()">Exit</button>
+           
+            </div>
+
+            <div id="enemyCombat" class="flex-column">
+                <div id = "enemyImage"></div>
+                <p id="eh"></p>
+                <p id="ed"></p>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="level1_collisions"></script>
+
+<script src="scripts/classes.js" type="text/javascript"></script>
+<script src="scripts/constants.js" type="text/javascript"></script>
+<script src="scripts/eventsDisplay.js" type="text/javascript"></script>
+<script src="scripts/battles.js" type="text/javascript"></script>
+
+
+<script src="index.js" type="text/javascript"></script>
+</html>
